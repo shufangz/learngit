@@ -13,6 +13,7 @@
 			<div v-for="left,index2 in div.inner">
 				<div class="leftcircle">
 					   <div class="circle">
+					   				            <!--進度圓->
 				            <!--左半边圆-->
 				            <div class="circle_left">
 				                <div class="clip_left">

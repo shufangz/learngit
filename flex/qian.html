@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+ <html lang="en"> 
+ 	<head> 
+ 		<meta charset="UTF-8"> 
+ 		<title>Title</title> 
+ 		<style> 
+ 	{ margin: 0; padding: 0; list-style: none; } 
+ </style> 
+</head>
+ <body>
+  <table id="app" border="1" cellspacing="0" cellpadding="0"> 
+  	<tr>
+		<td>父循环第几次</td>
+		<td>子循环第几次</td> 
+		<td>json的第几条数据</td> 
+		<td>数值</td>
+  	</tr> 
+  	<tbody v-for="x,index in parentList">
+		<tr v-for="i,index2 in x.childList"> 
+			<td>{{index}}</td>
+			<td>{{index2}}</td> 
+			<td>{{i.index}}</td> 
+			<td>{{i.childName}}</td> 
+		</tr> 
+  	 </tbody> 
+  	</table>
+
+  	 </body> 
+  	 <script src="vue2.4.0.min.js"></script>
+  	  <script> 
+  	  const app=new Vue({ el:"#app",
+  	   data:{ 
+	  	   parentList:
+	  	    [
+		  	    { 
+		  	    	childList: 
+					[
+						{ index: 1, childName: "第一个节点" },
+						{ index: 2, childName: "第一个节点" }, 
+						{ index: 3, childName: "第一个节点" }, 
+						{ index: 4, childName: "第一个节点" }, 
+						{ index: 5, childName: "第一个节点" }
+					] 
+				},
+		   		{ 
+		   			childList: 
+		   			[
+						{ index: 6, childName: "第二个节点" },
+						{ index: 7, childName: "第二个节点" },
+						{ index: 8, childName: "第二个节点" }, 
+						{ index: 9, childName: "第二个节点" }, 
+						{ index: 10, childName: "第二个节点" }
+					] 
+				},
+		 		{ 
+		 			childList: 
+		 			[
+		 				{ index: 11, childName: "第三个节点" },
+		  				{ index: 12, childName: "第三个节点" },
+		   				{ index: 13, childName: "第三个节点" }, 
+						{ index: 14, childName: "第三个节点" }, 
+						{ index: 15, childName: "第三个节点" }
+					] 
+				}
+			] 
+		} 
+	}) 
+</script>
+ </html>
